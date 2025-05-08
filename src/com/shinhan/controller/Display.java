@@ -1,5 +1,7 @@
 package com.shinhan.controller;
 
+import java.util.Scanner;
+
 public class Display {
 	public static void displayStart() {
 		System.out.println("==================================");
@@ -20,6 +22,31 @@ public class Display {
 	public static void displayError(String context) {
 		System.out.println(context);
 		System.out.println("==================================");
+	}
+	
+	public static boolean displayContinue(Scanner input) {
+		while (true) {
+			System.out.println("==================================");
+			System.out.println("1. 다시 시도");
+			System.out.println("2. 뒤로가기");
+			System.out.println("==================================");
+			System.out.print("원하시는 메뉴 번호를 선택하세요: ");
+			int isContinue = input.nextInt();
+			input.nextLine();
+
+			switch (isContinue) {
+			case 1 -> {
+				return true;
+			}
+			case 2 -> {
+				return false;
+			}
+			default -> {
+				displayInputError("1번 또는 2번 중 하나를 선택해주세요.");
+				continue;
+			}
+			}
+		}
 	}
 	
 	public static void displayExit() {
