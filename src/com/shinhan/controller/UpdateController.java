@@ -4,7 +4,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
 import com.shinhan.service.BoardService;
 import com.shinhan.view.BoardView;
 
@@ -46,6 +46,7 @@ public class UpdateController implements CommonControllerInterface{
 						.wdate(today)
 						.nickname(nickname)
 						.build();
+		
 		int result = boardService.MemberUpdate(board);
 		BoardView.display(result + "건이 수정되었습니다.");
 		BoardView.display("수정일시: " + today);
