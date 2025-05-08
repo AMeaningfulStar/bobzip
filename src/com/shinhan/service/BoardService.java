@@ -1,6 +1,10 @@
 package com.shinhan.service;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
+
+import java.util.List;
+
+import com.shinhan.dao.BoardselectDAO;
 import com.shinhan.dao.InsertDAO;
 import com.shinhan.dao.UpdateDAO;
 

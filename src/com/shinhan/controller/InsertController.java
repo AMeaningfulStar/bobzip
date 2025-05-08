@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.UUID;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
 import com.shinhan.service.BoardService;
 import com.shinhan.view.BoardView;
 
@@ -39,6 +39,8 @@ public class InsertController implements CommonControllerInterface{
 						.wdate(today)
 						.nickname(nickname)
 						.build();
+		
+		System.out.println(board);
 		int result = boardService.memberInsert(board);
 		BoardView.display(result + "건이 등록되었습니다.");
 	}
