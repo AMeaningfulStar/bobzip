@@ -21,4 +21,4 @@
 | **김민성** | 프로젝트 초기 세팅, FrontController, Merge 리뷰 |
 | **박채원** | 게시글 작성 (Insert), 수정 (Update), Controller, Service |
 | **김지민** | Controller, Service, DB 설계 |
-| **최윤정** | 게시글 조회 (Select), Controller, Service, DB 설계 |
+| **최윤정** | 게시글 조회 (Select), 삭제 (Delete), Controller, Service, DB 설계 |
