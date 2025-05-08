@@ -2,10 +2,11 @@ package com.shinhan.controller;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
 import com.shinhan.service.BoardService;
 import com.shinhan.view.BoardView;
 
@@ -20,8 +21,16 @@ public class InsertController implements CommonControllerInterface{
 		System.out.print("게시글 제목(상호명)>> ");
 		String title = sc.nextLine();
 		
-		System.out.print("해당 식당의 카테고리를 입력하세요(한식, 일식, 중식, 양식, 기타)>> ");
-		String cate = sc.nextLine();
+		List<String> validCates = List.of("한식", "일식", "중식", "양식", "기타");
+		String cate = "";
+		while(true) {
+			System.out.print("해당 식당의 카테고리를 입력하세요(한식, 일식, 중식, 양식, 기타)>> ");
+			cate = sc.nextLine().trim();
+			if (validCates.contains(cate)) {
+				break;
+			}
+			System.out.println("❌ 잘못된 카테고리입니다. 한식, 일식, 중식, 양식, 기타 중 하나를 정확히 입력해주세요.");
+		}
 		
 		System.out.print("게시글 내용을 입력해주세요>> ");
 		String contents = sc.nextLine();
