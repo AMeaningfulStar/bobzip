@@ -57,10 +57,12 @@ public class FrontController {
 
 					switch (menuInput) {
 					case 1 -> {
-
+						new UpdateController().execute();
+						break;
 					}
 					case 2 -> {
-
+						new BoardDeleteController().execute(target.getBoard_id());
+						break;
 					}
 					case 3 -> {
 						isView = true;
