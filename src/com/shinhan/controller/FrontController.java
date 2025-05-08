@@ -19,12 +19,12 @@ public class FrontController {
 			String startInput = input.nextLine();
 
 			if (startInput.matches("\\d+")) {
+				// DTO target = dataList.get(Integer.parseInt(startInput) - 1);
 				// 게시글 번호로 불러오기
 			} else {
 				switch (startInput) {
 				case "create" -> {
-					// 게시글 작성 -> insert
-					// DTO target = dataList.get(Integer.parseInt(startInput) - 1);
+					new InsertController().execute();
 				}
 				case "exit" -> {
 					isServiceOff = true;
