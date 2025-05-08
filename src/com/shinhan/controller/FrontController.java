@@ -4,46 +4,42 @@ import java.util.Scanner;
 
 public class FrontController {
 	static Scanner input = new Scanner(System.in);
+	// user 값을 저장하고 사용하기 위한 전역 변수
 	static boolean user = false;
 
+	// Front Controller Main
 	public static void main(String[] args) {
+		// 서비스 종료 여부를 담당하는 변수
 		boolean isServiceOff = false;
 
+		// isServiceOff가 false이면 계속 반복
 		while (!isServiceOff) {
-			user = startServiceFlow();
+			// <- 여기에 목록 불러오면 됩니다!!
+			Display.displayStart();
+			String startInput = input.nextLine();
 
-			if (user == false) {
-				break;
+			if (startInput.matches("\\d+")) {
+				// 게시글 번호로 불러오기
 			} else {
+				switch (startInput) {
+				case "create" -> {
+					// 게시글 작성 -> insert
+					// DTO target = dataList.get(Integer.parseInt(startInput) - 1);
+				}
+				case "exit" -> {
+					isServiceOff = true;
+				}
+				default -> {
+					Display.displayInputError("다시 입력해주세요.");
+					continue;
+				}
+				}
 			}
 		}
 
+		// scanner 반납
 		input.close();
+		// 서비스 종료 화면
 		Display.displayExit();
 	}
-
-	private static boolean startServiceFlow() {
-		while (true) {
-			Display.displayStart();
-			int startInput = input.nextInt();
-			input.nextLine();
-
-			switch (startInput) {
-			case 1 -> {
-				return true;
-			}
-			case 2 -> {
-				return true;
-			}
-			case 3 -> {
-				return false;
-			}
-			default -> {
-				Display.displayError("메뉴에 있는 번호 중 하나를 선택해주세요.");
-				continue;
-			}
-			}
-		}
-	}
-
 }
