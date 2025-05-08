@@ -7,20 +7,15 @@ public class Display {
 		System.out.println("==================================");
 		System.out.println("      BobZip 맛집 리뷰 게시판     ");
 		System.out.println("==================================");
-		System.out.println("1. 로그인");
-		System.out.println("2. 회원가입");
-		System.out.println("3. 프로그램 종료");
+		System.out.println("\"게시글 확인을 원하는 번호를 입력해주세요\"");
+		System.out.println("create: 리뷰 작성");
+		System.out.println("exit: 프로그램 종료");
 		System.out.println("==================================");
-		System.out.print("원하시는 메뉴 번호를 선택하세요: ");
+		System.out.print("원하시는 작업을 입력하세요: ");
 	}
 	
 	public static void displayInputError(String context) {
 		System.out.println("⚠ 잘못된 입력입니다. " + context);
-		System.out.println("==================================");
-	}
-
-	public static void displayError(String context) {
-		System.out.println(context);
 		System.out.println("==================================");
 	}
 	
