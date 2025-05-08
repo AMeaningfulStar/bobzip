@@ -23,4 +23,14 @@ public class BoardService {
 		return boarddeleteDAO.boardDeleteById(board_id);
 	}
 
+	InsertDAO insertDAO = new InsertDAO();
+	UpdateDAO updateDAO = new UpdateDAO();
+
+	public int memberInsert(BoardDTO board) {
+		return insertDAO.memberInsert(board);
+	}
+	
+	public int MemberUpdate(BoardDTO board) {
+		return updateDAO.MemberUpdate(board);
+	}
 }
