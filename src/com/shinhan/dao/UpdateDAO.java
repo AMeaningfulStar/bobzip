@@ -11,7 +11,7 @@ import com.shinhan.util.DButil;
 
 
 public class UpdateDAO {
-	/*
+	
 	public int MemberUpdate(BoardDTO board) {
 		int result = 0; // 건수만 리턴
 		
@@ -20,13 +20,13 @@ public class UpdateDAO {
 		
 		Map<String, Object> dynamicSQL = new HashMap<>();
 		
-		if(board.getTitle() != null) dynamicSQL.put("BOARD_ID", board.getPart_pw());
-		if(member.getPart_name() != null) dynamicSQL.put("PART_NAME", member.getPart_name());
-		if(member.getEmail() != null) dynamicSQL.put("EMAIL", member.getEmail());
-		if(member.getPhone() != null) dynamicSQL.put("PHONE", member.getPhone());
+		if(board.getTitle() != null) dynamicSQL.put("BOARD_ID", board.getTitle());
+		if(board.getCate() != null) dynamicSQL.put("CATE", board.getCate());
+		if(board.getContents() != null) dynamicSQL.put("CONTENTS", board.getContents());
+		if(board.getNickname() != null) dynamicSQL.put("NICKNAME", board.getNickname());
 		
-		String sql = "update member set ";
-		String sql2 = " where part_id = ?";
+		String sql = "update board set ";
+		String sql2 = " where board_id = ?";
 		
 		for(String key:dynamicSQL.keySet()) {
 			sql += key + "=" + "?," ;
@@ -42,7 +42,7 @@ public class UpdateDAO {
 			for(String key:dynamicSQL.keySet()) {
 		 		st.setObject(i++, dynamicSQL.get(key));
 		 	}
-			st.setString(i, member.getPart_id());
+			st.setString(i, board.getBoard_id());
 			
 			result = st.executeUpdate(); 
 		
@@ -52,5 +52,5 @@ public class UpdateDAO {
 		
 		return result;
 	}
-	*/
+	
 }
