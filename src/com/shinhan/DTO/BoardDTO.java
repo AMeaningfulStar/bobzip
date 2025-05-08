@@ -1,4 +1,4 @@
-package com.shinhan.DTO;
+package com.shinhan.dto;
 
 import java.sql.Date;
 

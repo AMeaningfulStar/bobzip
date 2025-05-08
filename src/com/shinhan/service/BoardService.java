@@ -1,8 +1,8 @@
 package com.shinhan.service;
 
-import com.shinhan.DTO.BoardDTO;
 import com.shinhan.dao.InsertDAO;
 import com.shinhan.dao.UpdateDAO;
+import com.shinhan.dto.BoardDTO;
 
 public class BoardService {
 

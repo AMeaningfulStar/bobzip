@@ -4,7 +4,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
 import com.shinhan.service.BoardService;
 import com.shinhan.view.BoardView;
 
