@@ -10,7 +10,6 @@ public class DButil {
 	// DB 연결함수
 		public static Connection getConnection() {
 			Connection conn = null;
-//			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String url = "jdbc:oracle:thin:@192.168.0.240:1521:xe";
 			String userid = "BOBZIP", userpass = "1234";
 			try { 
@@ -23,6 +22,7 @@ public class DButil {
 			}
 			return conn;
 		}
+		
 		// DB 연결시 사용한 자원 해제하는 함수
 		public static void dbDisconnect(Connection conn, Statement st, ResultSet rs) {
 			try {

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.shinhan.DTO.BoardDTO;
+import com.shinhan.dto.BoardDTO;
 import com.shinhan.util.DButil;
 
 
