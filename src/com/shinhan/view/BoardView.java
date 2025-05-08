@@ -14,7 +14,7 @@ public class BoardView {
 		System.out.println("게시물 정보: "+board);
 	}
 
-	private static void display(String message) {
+	public static void display(String message) {
 		System.out.println("메시지|| " + message);
 	}
 
