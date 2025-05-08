@@ -23,7 +23,7 @@ public class BoardselectDAO {
 	    PreparedStatement pst = null;
 	    ResultSet rs = null;
 
-	    String sql = "SELECT board_id, title, cate, nickname FROM board";
+	    String sql = "SELECT board_id, title, cate, wdate, nickname FROM board";
 
 	    try {
 	        conn = DButil.getConnection();
@@ -35,6 +35,7 @@ public class BoardselectDAO {
 	            board.setBoard_id(rs.getString("board_id"));
 	            board.setTitle(rs.getString("title"));
 	            board.setCate(rs.getString("cate"));
+	            board.setWdate(rs.getDate("wdate"));
 	            board.setNickname(rs.getString("nickname"));
 	            boardlist.add(board);
 	        }
